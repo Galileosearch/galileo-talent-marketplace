@@ -1,13 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import GalileoNav from '../components/shared/galileo-nav'
 
 export default function LandingPage() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-dvh bg-navy text-white">
-      <GalileoNav />
-
+    <>
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 py-20 text-center">
         <p className="text-galileo-blue text-xs font-semibold tracking-[0.15em] uppercase mb-4">
@@ -24,7 +21,7 @@ export default function LandingPage() {
         <div className="flex flex-wrap gap-4 justify-center">
           <button
             onClick={() => navigate('/browse')}
-            className="px-8 py-3 bg-galileo-blue text-white font-semibold rounded-xl hover:bg-galileo-blue/90 transition cursor-pointer"
+            className="px-8 py-3 bg-gradient-to-r from-[#06b3e8] to-[#0595c2] text-white font-semibold rounded-xl hover:shadow-[0_0_20px_rgba(6,179,232,0.3)] transition-shadow cursor-pointer"
           >
             Browse Talent
           </button>
@@ -79,11 +76,6 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="text-center py-8 text-xs text-muted border-t border-white/5">
-        <p>Built on Anthropic's Claude. Part of the Galileo Search ecosystem.</p>
-      </footer>
-    </div>
+    </>
   )
 }
